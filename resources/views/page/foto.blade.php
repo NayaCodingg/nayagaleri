@@ -10,7 +10,6 @@
   <title>Document</title>
 </head>
 <body>
-  ini foto
 </body>
 </html>
 

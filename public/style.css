@@ -289,7 +289,7 @@ img {
 
 #forgot-pass {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #forgot-pass a {
@@ -463,4 +463,19 @@ img {
 
 .comment-box .comment-submit:hover {
     background: pink;
+}
+
+.nav-item .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0, 3s ease;
+}
+
+.nav-item .menu .item .sub-menu {
+    background-color: aliceblue;
+}
+
+.nav-item .menu .item .sub-menu a {
+    padding-left: 80px;
 }

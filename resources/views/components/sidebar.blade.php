@@ -19,18 +19,21 @@
                     <span>home</span></a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('page.foto')}}">
-                <i class="bi bi-images"></i>
-                    <span>foto</span></a>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Post</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Components:</h6>
+                        <a class="collapse-item" href="{{route('page.upfoto.upload')}}">Upload</a>
+                        <a class="collapse-item" href="{{route('page.foto')}}">Foto</a>
+                    </div>
+                </div>
             </li>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('page.album')}}">
-                <i class="bi bi-grid-1x2-fill"></i>
-                    <span>album</span></a>
-            </li>
-
             <div class="horizontal-line" style="width:200px; height:2px; background-color:white;" ></div>
 
             <li class="nav-item active">
