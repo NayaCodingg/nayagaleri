@@ -9,9 +9,8 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\SaveController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UploadController;
-
-
-
+use App\Http\Controllers\ForgotpasswordController;
+use App\Http\Controllers\RegisterController;
 
 
 /*
@@ -25,7 +24,7 @@ use App\Http\Controllers\UploadController;
 |
 */
 
-Route::get('/login', [LoginController::class, 'index'])->name('page.login');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/', [HomeController::class, 'index'])->name('page.home');
 Route::get('/foto', [FotoController::class, 'index'])->name('page.foto');
 Route::get('/album', [AlbumController::class, 'index'])->name('page.album');
@@ -33,3 +32,6 @@ Route::get('/komentar', [KomentarController::class, 'index'])->name('page.koment
 Route::get('/like', [LikeController::class, 'index'])->name('page.like');
 Route::get('/save', [SaveController::class, 'index'])->name('page.save');
 Route::get('/upload', [UploadController::class, 'index'])->name('page.upfoto.upload');
+Route::get('/forgotpassword', [ForgotpasswordController::class, 'index'])->name('logen.forgotpassword');
+Route::get('/register', [RegisterController::class, 'index'])->name('logen.register');
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');

@@ -40,6 +40,7 @@
                         <div class="p-5">
                         <div id="form-ui">
                           <form action="" method="post" id="form">
+                          @csrf
                             <div id="form-body">
                               <div id="welcome-lines">
                                 <div id="welcome-line-1">Login</div>
@@ -63,10 +64,10 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgot-password.blade.php">Forgot Password?</a>
+                                <a class="small" href="forgotpassword">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="register.blade.php">Create an Account!</a>
+                                <a class="small" href="register">Create an Account!</a>
                             </div>
                         </div>
                     </div>
