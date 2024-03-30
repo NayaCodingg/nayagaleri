@@ -19,7 +19,7 @@ class RegisterController extends Controller
         $validatedData = $request->validate([
             'Username' => ['required','unique:users'],
             'Password' => ['required'],
-            'Email' => ['required', 'unique:users'], // Sudah sesuai dengan kolom yang ada dalam tabel users
+            'Email' => ['required','unique:users'], // Sudah sesuai dengan kolom yang ada dalam tabel users
             'NamaLengkap' => ['required'],
             'Alamat' => ['required']
         ]);        
