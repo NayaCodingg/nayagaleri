@@ -39,7 +39,7 @@
                     <div class="col-lg-6">
                         <div class="p-5">
                         <div id="form-ui">
-                          <form action="" method="post" id="form">
+                          <form action="  " method="post" id="form">
                           @csrf
                             <div id="form-body">
                               <div id="welcome-lines">

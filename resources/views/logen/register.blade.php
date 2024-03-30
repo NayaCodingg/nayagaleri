@@ -36,14 +36,14 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div id="form-ui">
-                                        <form action="{{ route('register.store') }}" method="post" id="form" class="users">
+                                        <form action="{{ route('register.store') }}" method="post">
                                             @csrf
                                             <div id="form-body">
                                                 <div class="text-center">
                                                     <h1 class="h4 text-primary-900 mb-4">Create an Account!</h1>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" name="Username" class="form-control rounded-top" id="exampleInputName" placeholder="Name">
+                                                    <input type="text" name="Username" class="form-control rounded-top" id="exampleInputName" placeholder="Username">
                                                     @error('name')
                                                     <div class="invalid-feedback">
                                                         Please choose a name
@@ -51,10 +51,16 @@
                                                     @enderror
                                                 </div>
                                                 <div class="form-group">
+                                                    <input type="text" name="NamaLengkap" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nama Lengkap">
+                                                </div>
+                                                <div class="form-group">
                                                     <input type="email" name="Email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
                                                 </div>
                                                 <div class="passwoo">
                                                     <input type="password" name="Password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                                </div>
+                                                <div class="passwoo">
+                                                    <textarea name="Alamat" id="exampleInputPassword" rows="5" class="form-control form-control-user" placeholder="Alamat"></textarea>
                                                 </div>
                                                 <div id="submit-button-cvr">
                                                     <button id="submit-button" type="submit">Register</button>
