@@ -22,14 +22,15 @@ class RegisterController extends Controller
             'Email' => ['required','unique:users'], // Sudah sesuai dengan kolom yang ada dalam tabel users
             'NamaLengkap' => ['required'],
             'Alamat' => ['required']
-        ]);        
+        ]);
         $validatedData['Password'] = Hash::make($validatedData['Password']);
-        try {
+       if ($validatedData){
             User::create($validatedData);
             return redirect()->route('login');
-        } catch (\Exception $e) {
-            return back()->withInput()->withErrors(['error' => $e->getMessage()]);
         }
-        
+        else {
+            return back();
+        }
+
     }
 }
