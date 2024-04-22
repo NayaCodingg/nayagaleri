@@ -39,7 +39,7 @@
                     <div class="col-lg-6">
                         <div class="p-5">
                         <div id="form-ui">
-                          <form action="  " method="post" id="form">
+                          <form action="{{ route('login.authenticate') }}" method="post" id="form">
                           @csrf
                             <div id="form-body">
                               <div id="welcome-lines">
@@ -48,14 +48,14 @@
                               </div>
                               <div id="input-area">
                                 <div class="form-inp">
-                                  <input placeholder="Email Address" type="text">
+                                  <input name="email" placeholder="Email Address" type="text">
                                 </div>
                                 <div class="form-inp">
-                                  <input placeholder="Password" type="password">
+                                  <input name="password" placeholder="Password" type="password">
                                 </div>
                               </div>
                               <div id="submit-button-cvr">
-                                <button href="/home" id="submit-button" type="submit">Login</button>
+                                <button id="submit-button" type="submit">Login</button>
                               </div>
                                 <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">

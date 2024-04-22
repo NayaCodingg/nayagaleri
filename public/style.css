@@ -24,6 +24,43 @@ img {
     transform: rotate(15deg);
 }
 
+/* ---------------------upload foto--------------------- */
+
+.right {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    grid-gap: 1.25rem;
+    gap: 1.25rem;
+}
+/* button */
+button#createfoto {
+    position: relative;
+    display: inline-block;
+    margin-top: -25px;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ce69ac;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #b35c9d;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #d475a5;
+    width: 100px;
+    height: 40px;
+}
+
+button#createfoto:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #d458b9;
+}
+
+button#createfoto:active {
+    transform: scale(2);
+}
 
 /* FOTO */
 .container#file {
