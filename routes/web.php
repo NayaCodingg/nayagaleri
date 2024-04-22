@@ -32,9 +32,9 @@ Route::get('/save', [SaveController::class, 'index'])->name('page.save');
 Route::get('/upload', [UploadController::class, 'index'])->name('page.upfoto.upload');
 
 // Upload
-// // Route::get('/photo', [FotoController::class, 'index'])->name('page.foto')->middleware('auth');
-// Route::get('/upload-foto', [FotoController::class, 'upload'])->name('page.upfoto.upload')->middleware('auth');
-// Route::post('/upload-foto', [FotoController::class, 'foto'])->name('page.foto');
+ Route::get('/photo', [FotoController::class, 'index'])->name('page.foto')->middleware('auth');
+ Route::get('/upload-foto', [FotoController::class, 'upload'])->name('page.upfoto.upload')->middleware('auth');
+ Route::post('/upload-foto', [FotoController::class, 'foto'])->name('page.foto');
 
 // komen
 Route::get('/komentar', [KomentarController::class, 'index'])->name('page.komentar');

@@ -39,6 +39,7 @@
                     <div class="col-lg-6">
                         <div class="p-5">
                         <div id="form-ui">
+                        {{ session('error') }}
                           <form action="{{ route('login.authenticate') }}" method="post" id="form">
                           @csrf
                             <div id="form-body">

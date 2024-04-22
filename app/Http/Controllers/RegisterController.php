@@ -23,7 +23,7 @@ class RegisterController extends Controller
             'NamaLengkap' => ['required'],
             'Alamat' => ['required']
         ]);
-        $validatedData['Password'] = Hash::make($validatedData['Password']);
+        
        if ($validatedData){
             User::create($validatedData);
             return redirect()->route('login');
