@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Controll;
 use App\Models\Komentar;
 use Illuminate\Http\Request;
 
@@ -11,10 +12,10 @@ class KomentarController extends Controller
     {
         $komentar = Komentar::all();
 
-        return view('page.komentar', ['komentar' => $komentar]);
+        return view('page.komentar', ['komentar $komentar']);
     }
 
-    public function store(Request $request, Photo $photo)
+    public function store(Request $request, foto $foto)
     {
         $request->validate([
             'content' => 'required',
@@ -22,7 +23,7 @@ class KomentarController extends Controller
 
         Komentar::create([
             'user_id' => Auth::id(),
-            'photo_id' => $photo->id,
+            'foto_id' => $foto->id,
             'content' => $request->input('content'),
         ]);
 

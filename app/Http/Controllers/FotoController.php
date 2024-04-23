@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Date;
 class FotoController extends Controller
 {
 
-    public function index() {
+    public function foto() {
 
         $foto = Foto::all();
         return view('page.foto', [
@@ -23,10 +23,10 @@ class FotoController extends Controller
         ]);
     }
 
-    public function create()
+    public function upload()
     {
         return view('page.upfoto.upload', [
-            "title" => "Create Post"
+            "title" => "Upload"
         ]);
     }
 
@@ -51,8 +51,8 @@ class FotoController extends Controller
 
         Foto::create($validated);
 
-        return redirect()->route('page.foto')->with('success', 'Post Photo Succesfull >y<');
-        return redirect()->route('page.foto')->with('error', 'Post Photo Failed :(');
+        return redirect()->route('page.foto')->with('success', 'Post Foto Succesfull >y<');
+        return redirect()->route('page.foto')->with('error', 'Post Foto Failed :(');
     }
 
 

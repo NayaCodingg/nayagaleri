@@ -24,6 +24,9 @@
          <img src = "../img/foto.7.png">
          <div class = "konten">
          </div>
+         <img src = "../img/fotoo.jpg">
+         <div class = "konten">
+         </div>
       </main>
    </div>
  @endsection

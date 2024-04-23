@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Komentar extends Model
 {
-    protected $table = 'komentar';
+    protected $fillable = ['user_id, foto_id, content'];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function photo()
+    public function foto()
     {
-        return $this->belongsTo(Photo::class);
+        return $this->belongsTo(foto::class);
     }
 }

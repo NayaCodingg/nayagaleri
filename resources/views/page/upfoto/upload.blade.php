@@ -20,7 +20,7 @@
 <br>
 <center>
         <div class="d-flex flex-column">
-            <form action="{{route('page.foto')}}" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>

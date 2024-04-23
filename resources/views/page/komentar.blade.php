@@ -8,7 +8,7 @@
     <button type="submit" class="btn btn-succes">Komentar</button>
 </form>
 <!-- daftar komentar -->
-@foreach ($komentar->photoKomentar as $k)
+@foreach ($komentar->Komentar as $k)
     <p>{{ $k->user->name}}: {{ $komentar->content }}</p>
 @endforeach
 @endsection
