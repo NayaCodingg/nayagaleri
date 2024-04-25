@@ -18,6 +18,9 @@
                 <i class="bi bi-house-door-fill"></i>
                     <span>home</span></a>
             </li>
+
+            <div class="horizontal-line" style="width:200px; height:2px; background-color:white;" ></div>
+
             <li class="nav-item active">
                 <span class="nav-link"  data-toggle="modal" data-target="#exampleModalCenter" type="button">
                     <span>+ Album</span>
@@ -48,12 +51,17 @@
       </div>
     </div>
   </form>
+
+
             </li>
             <li class="nav-item active">
               <a href="/albums" class="nav-link"  >
                   <span>MyAlbums</span>
               </a>
             </li>
+
+<div class="horizontal-line" style="width:200px; height:2px; background-color:white;" ></div>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -69,23 +77,12 @@
                     </div>
                 </div>
             </li>
-            <div class="horizontal-line" style="width:200px; height:2px; background-color:white;" ></div>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('page.komentar')}}">
-                <i class="bi bi-chat-square-text-fill"></i>
-                    <span>komentar</span></a>
-            </li>
 
-           
+
 
             <div class="horizontal-line" style="width:200px; height:2px; background-color:white;" ></div>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('page.save')}}">
-                <i class="bi bi-bookmarks-fill"></i>
-                    <span>save</span></a>
-            </li>
 
 
 </ul>
