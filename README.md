@@ -2,7 +2,7 @@
 
 ## ABOUT WEBSITE  
 
-Aplikasi Web Galeri yang dibuat sederhana untuk public
+Aplikasi Web Galeri untuk Menyimpan Foto
 
 ## FITUR  
 - login.
