@@ -21,7 +21,14 @@ Aplikasi Web Galeri yang dibuat sederhana
 ![pict 5](https://github.com/NayaCodingg/nayagaleri/assets/154432523/17ef8518-f0e9-4ef8-b3a7-5355c7e0dd22)
 
 ## ERD, Relasi dan UML Use Case
+
+'ERD'
 ![pict 0](https://github.com/NayaCodingg/nayagaleri/assets/154432523/8adbb377-3b95-4d1e-9744-824de2fb05fa)
+
+'RELASI'
 ![pict lol](https://github.com/NayaCodingg/nayagaleri/assets/154432523/84c4e7ca-d8e1-4d1d-aa68-96cd12cce3f9)
+
+'UML USE CASE'
+![WhatsApp Image 2024-04-26 at 00 50 47_8f1d2e79](https://github.com/NayaCodingg/nayagaleri/assets/154432523/447f7891-f982-4f8e-a9b5-44cfd5a0ea0d)
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
