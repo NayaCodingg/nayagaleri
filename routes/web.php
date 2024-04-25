@@ -23,22 +23,24 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('page.home');
-Route::get('/foto', [FotoController::class, 'index'])->name('page.foto');
-Route::get('/album', [AlbumController::class, 'index'])->name('page.album');
-Route::get('/like', [LikeController::class, 'index'])->name('page.like');
-Route::get('/save', [SaveController::class, 'index'])->name('page.save');
+Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('page.home');
+Route::get('/foto', [FotoController::class, 'index'])->middleware('auth')->name('page.foto');
+Route::get('/albums', [AlbumController::class, 'index'])->middleware('auth')->name('page.album');
+Route::get('/album/{id}', [AlbumController::class, 'detail'])->middleware('auth');
+Route::get('/save', [SaveController::class, 'index'])->middleware('auth')->name('page.save');
 
 // Upload
 Route::get('/upload', [UploadController::class, 'upload'])->name('page.upfoto.upload');
 Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
 
 // Komentar
-Route::get('/komentar', [KomentarController::class, 'index'])->name('page.komentar');
+Route::post('/cmnt', [KomentarController::class, 'index'])->middleware('auth')->name('page.komentar');
 
 // Login, Register, Forgot Password
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
+Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth')->name('logout');
+Route::post('/upl_album',[UploadController::class,'upl_album']);
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest')->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Date;
 class FotoController extends Controller
 {
 
-    public function foto() {
+    public function index() {
 
         $foto = Foto::all();
         return view('page.foto', [

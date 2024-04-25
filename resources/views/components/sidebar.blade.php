@@ -18,7 +18,42 @@
                 <i class="bi bi-house-door-fill"></i>
                     <span>home</span></a>
             </li>
+            <li class="nav-item active">
+                <span class="nav-link"  data-toggle="modal" data-target="#exampleModalCenter" type="button">
+                    <span>+ Album</span>
+                </span>
 
+                <!-- Button trigger modal -->
+
+  <form action="/upl_album" method="post" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    @csrf
+    @method('POST')
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">New Album</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        {{-- <input type="text" name=""> --}}
+        <input type="text" class="form-control" placeholder="Album Name" name="albumname" aria-label="albumname" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Description" name="desc" aria-label="albumname" aria-describedby="basic-addon1">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </form>
+            </li>
+            <li class="nav-item active">
+              <a href="/albums" class="nav-link"  >
+                  <span>MyAlbums</span>
+              </a>
+            </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -42,11 +77,7 @@
                     <span>komentar</span></a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('page.like')}}">
-                <i class="bi bi-chat-right-heart-fill"></i>
-                    <span>like</span></a>
-            </li>
+           
 
             <div class="horizontal-line" style="width:200px; height:2px; background-color:white;" ></div>
 

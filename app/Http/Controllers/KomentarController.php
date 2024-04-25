@@ -2,31 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Controll;
-use App\Models\Komentar;
+use App\Models\CommentModel;
+
 use Illuminate\Http\Request;
 
 class KomentarController extends Controller
 {
-    public function index()
-    {
-        $komentar = Komentar::all();
+    public function index(Request $r){
+   $v = $r->validate([
+    'userid' => 'required',
+    'fotoid' => 'required',
+    'cmnt' => 'required'
+   ]);
 
-        return view('page.komentar', ['komentar $komentar']);
-    }
-
-    public function store(Request $request, foto $foto)
-    {
-        $request->validate([
-            'content' => 'required',
-        ]);
-
-        Komentar::create([
-            'user_id' => Auth::id(),
-            'foto_id' => $foto->id,
-            'content' => $request->input('content'),
-        ]);
-
-        return back();
+   CommentModel::create($v);
+   return back();
     }
 }

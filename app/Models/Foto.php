@@ -2,25 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\CommentModel;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Foto extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['FotoID'];
+    protected $guarded = ['id'];
+    protected $table = 'foto';
 
-    public function komentar()
-    {
-        return $this->belongsToMany(Komentar::class);
-    }
-    public function likefoto()
-    {
-        return $this->hasMany(LikeFoto::class);
-    }
-    public function User()
-    {
-        return $this->belongsTo(User::class, 'UserID');
-    }
+   public function fotoComments(){
+    return $this->hasMany(CommentModel::class,'id');
+   }
 }

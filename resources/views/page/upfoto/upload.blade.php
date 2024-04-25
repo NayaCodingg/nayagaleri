@@ -1,12 +1,13 @@
 @extends('layout.app')
 
 @section('content')
+<form action="" method="post" enctype="multipart/form-data">
 
 <div class="container" id="file">
   <div class="header">
       <path d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"></path> </g></svg>
       <div class="input-div">
-  <input class="input" name="file" type="file">
+  <input class="input" name="LokasiFile" type="file">
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon"><polyline points="16 16 12 12 8 16"></polyline><line y2="21" x2="12" y1="12" x1="12"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
 </div>
   </div>
@@ -19,24 +20,32 @@
 </div>
 <br>
 <center>
-        <div class="d-flex flex-column">
-            <form action="" method="post" enctype="multipart/form-data">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
-
-                    @csrf
-                    <button class="mb-2" type="submit" id="createfoto">Post</button>
+    <div class="">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
-            </form>
-        </div>
-    </div>
-</center>
+                @endif
 
+                @csrf
+                <select class="form-select" aria-label="Default select example" name="albumid" style="width: 10%;">
+                    <option value="0" selected>Select Album</option>
+                    @foreach ($albm as $a )
+                        
+                    <option value="{{$a->id}}">{{$a->albumname}}</option>
+                    @endforeach
+      
+                  </select>
+            <br>
+                  <button class="mb-2" type="submit" id="createfoto">Post</button>
+            </div>
+      
+    </div>
+</div>
+</center>
+</form>
 @endsection

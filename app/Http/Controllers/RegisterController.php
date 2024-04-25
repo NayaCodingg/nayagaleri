@@ -18,12 +18,14 @@ class RegisterController extends Controller
         // Validasi input dari request
         $validatedData = $request->validate([
             'Username' => ['required','unique:users'],
-            'Password' => ['required'],
-            'Email' => ['required','unique:users'],
+            'password' => ['required'],
+            'email' => ['required','unique:users'],
             'NamaLengkap' => ['required'],
             'Alamat' => ['required']
         ]);
-        
+        // @dd($request['password']);
+        $validatedData['created_at'] = now();
+        $validatedData['password'] = bcrypt($request['password']);
        if ($validatedData){
             User::create($validatedData);
             return redirect()->route('login');

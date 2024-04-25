@@ -17,7 +17,7 @@ class CreateKomentarTable extends Migration
         $table->id();
         $table->unsignedBigInteger('user_id');
         $table->unsignedBigInteger('photo_id');
-        $table->text('content');
+        $table->text('cmnt');
         $table->timestamps();
     });
 }

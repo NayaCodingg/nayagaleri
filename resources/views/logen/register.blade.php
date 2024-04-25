@@ -40,6 +40,16 @@
                                             @csrf
                                             <div id="form-body">
                                                 <div class="text-center">
+                                                    @if ($errors->any())
+                                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                       @foreach ($errors->all() as $e)
+                                                           {{$e}} <br>
+                                                       @endforeach
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                      </div>
+                                                    @endif
                                                     <h1 class="h4 text-primary-900 mb-4">Create an Account!</h1>
                                                 </div>
                                                 <div class="form-group">
@@ -54,10 +64,10 @@
                                                     <input type="text" name="NamaLengkap" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nama Lengkap">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" name="Email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+                                                    <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
                                                 </div>
                                                 <div class="passwoo">
-                                                    <input type="password" name="Password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                                    <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                                                 </div>
                                                 <div class="passwoo">
                                                     <textarea name="Alamat" id="exampleInputPassword" rows="5" class="form-control form-control-user" placeholder="Alamat"></textarea>

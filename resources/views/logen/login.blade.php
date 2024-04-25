@@ -37,6 +37,16 @@
                 <div class="row">
                     <div class="col-lg-6 d-none d-lg-block" style="background-image: url(../img/foto.log.jpg); background-position: center; background-size: cover;"></div>
                     <div class="col-lg-6">
+                      @if ($errors->any())
+                      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                         @foreach ($errors->all() as $e)
+                             {{$e}} <br>
+                         @endforeach
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                      @endif
                         <div class="p-5">
                         <div id="form-ui">
                         {{ session('error') }}
@@ -59,7 +69,7 @@
                                 <button id="submit-button" type="submit">Login</button>
                               </div>
                                 <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                <a href="" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Login with Google
                                 </a>
                             </form>
