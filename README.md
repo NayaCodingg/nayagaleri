@@ -32,7 +32,7 @@ Aplikasi Web Galeri yang dibuat sederhana untuk public
 ![WhatsApp Image 2024-04-26 at 00 50 47_8f1d2e79](https://github.com/NayaCodingg/nayagaleri/assets/154432523/447f7891-f982-4f8e-a9b5-44cfd5a0ea0d)
 
 
-## INSTALASI
+## INSTALLATION
 
 #### 1. Clone Repositori
 ``` http
