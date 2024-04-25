@@ -20,9 +20,6 @@ Aplikasi Web Galeri yang dibuat sederhana
 ![pict 4](https://github.com/NayaCodingg/nayagaleri/assets/154432523/77187d14-8fa6-41a2-a7a9-733ff38b63bf)
 ![pict 5](https://github.com/NayaCodingg/nayagaleri/assets/154432523/17ef8518-f0e9-4ef8-b3a7-5355c7e0dd22)
 
-![alt text](?raw=true)
-![alt text](?raw=true)
-![alt text](?raw=true)
-![alt text](?raw=true)
+# ERD, Relasi dan UML Use Case
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
