@@ -18,7 +18,12 @@ Aplikasi Web Galeri yang dibuat sederhana
 - add comment.
 - like dll.
 
-## Tampilan website
+# TAMPILAN WEBSITE
+![pict 1](https://github.com/NayaCodingg/nayagaleri/assets/154432523/638b8462-4153-455f-ae69-6ae7410fb3bf)
+![pict 2](https://github.com/NayaCodingg/nayagaleri/assets/154432523/5a7cf1f6-cab4-4b39-b113-2515e835fe77)
+![pict 3](https://github.com/NayaCodingg/nayagaleri/assets/154432523/7ea29aa9-19bd-45b2-aa3b-8edfa349d6ff)
+![pict 4](https://github.com/NayaCodingg/nayagaleri/assets/154432523/77187d14-8fa6-41a2-a7a9-733ff38b63bf)
+![pict 5](https://github.com/NayaCodingg/nayagaleri/assets/154432523/17ef8518-f0e9-4ef8-b3a7-5355c7e0dd22)
 
 ![alt text](?raw=true)
 ![alt text](?raw=true)
