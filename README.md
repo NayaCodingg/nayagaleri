@@ -31,13 +31,44 @@ Aplikasi Web Galeri yang dibuat sederhana untuk public
 'UML USE CASE'
 ![WhatsApp Image 2024-04-26 at 00 50 47_8f1d2e79](https://github.com/NayaCodingg/nayagaleri/assets/154432523/447f7891-f982-4f8e-a9b5-44cfd5a0ea0d)
 
-##INSTALASI
 
-#### Clone Repositori
+## INSTALASI
+
+#### 1. Clone Repositori
 ``` http
 https://github.com/NayaCodingg/nayagaleri.git
 ```
+#### 2. Install Composer / Update Composer
+``` http
+composer install
+```
 
+``` http
+composer update
+```
+#### 3. Edit Database .env
+``` http
+DB_PORT=3306
+DB_DATABASE=gallery
+DB_USERNAME=root
+DB_PASSWORD=
+```
+#### 4. Generate Key | Terminal
+``` http
+php artisan key:generate
+```
+#### 5. Running Migrate & Seeder
+``` http
+php artisan migrate --seed
+```
+#### 6. Create Storage Link
+``` http
+php artisan storage:link
+```
+#### 7. Run the Server
+``` http
+php artisan serve
+```
 
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
