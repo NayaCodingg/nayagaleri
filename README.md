@@ -1,10 +1,10 @@
 # Website Galeri YULIANA MAURANI
 
-## About Website   
+## ABOUT WEBSITE  
 
-Aplikasi Web Galeri yang dibuat sederhana
+Aplikasi Web Galeri yang dibuat sederhana untuk public
 
-## Fitur   
+## FITUR  
 - login.
 - create account.
 - logout.
@@ -30,5 +30,14 @@ Aplikasi Web Galeri yang dibuat sederhana
 
 'UML USE CASE'
 ![WhatsApp Image 2024-04-26 at 00 50 47_8f1d2e79](https://github.com/NayaCodingg/nayagaleri/assets/154432523/447f7891-f982-4f8e-a9b5-44cfd5a0ea0d)
+
+##INSTALASI
+
+#### Clone Repositori
+``` http
+https://github.com/NayaCodingg/nayagaleri.git
+```
+
+
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
